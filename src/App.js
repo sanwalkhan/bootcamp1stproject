@@ -1,4 +1,5 @@
 import React from "react";
+import {TransactionProvider} from "./components/context.js"
 import './App.css';
 import{Header} from "./components/Header.js"
 import {Balance} from  "./components/Balance.js"
@@ -8,6 +9,7 @@ import {NewTransaction} from "./components/NewTransaction"
 
 function App() {
   return (
+    <TransactionProvider>
     <div className = "TrackerApp">
       <Header />
       <div className="balance">
@@ -23,6 +25,7 @@ function App() {
     <NewTransaction />
       </div>
     </div>
+    </TransactionProvider>
   );
 }
 
