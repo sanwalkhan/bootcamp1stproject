@@ -9,22 +9,21 @@ const [amount, setamount] = useState(0);
             <h3>
                 Add New Transaction
 
-                <form>
+                <form >
                  <div>
-                 <label htmlFor="text">Discription</label><br />
-                    <input type="text" placeholder="Details..." required/>
+                 <label htmlFor="text"> Discription </label><br />
+                    <input type="text" value={text} onChange={(e) => settext(e.target.value)} placeholder="Details..." required/>
                  </div>
 
                  <div>
                      <label htmlFor="amount">Amount
                      <br />
-                     (negative -expense, positive- income)
+                     {/* (negative -expense, positive- income) */}
                      </label>
-                     <br />
-                     <input type="number" placeholder="Value" required />
+                     <input type="number" value={amount} onChange={(e) => setamount(e.target.value)} placeholder="Value" required />
 
                  </div>
-                 <input type="submit" value="Add Transaction"  /> 
+                 <button className="btn" type="submit">Add Transaction</button> 
 
                 </form>
             </h3>
