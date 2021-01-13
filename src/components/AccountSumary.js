@@ -1,15 +1,11 @@
 import React from 'react'
 
-export const AccountSummary = () => {
+export const AccountSumary = () => {
     return (
-        <div  className="incexpcontainer">
-            <div>
-            <h4>        Income <br /><b>$0.00</b> </h4>
-            </div>
-            <hr />
-            <div>
-            <h4>Expense <br /><b>$0.00</b></h4>
-            </div>
+        <div  className="acsumary" > 
+             <h3>Income <br /> <b className="inc">+$0.00</b></h3>
+                <hr />
+             <h3>Expense <br /> <b className="exp">-$0.00</b></h3>
         </div>
     )
 }
